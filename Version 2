@@ -1,0 +1,30 @@
+# Deadline Date Formatter - Version 2
+
+
+from datetime import date
+
+# Ask the user for the event details
+print("=== EVENT DEADLINE FORMATTER ===")
+
+event = input("Enter event title: ")
+year = int(input("Enter year: "))
+month = int(input("Enter month (1-12): "))
+day = int(input("Enter day: "))
+
+# Get the date and its details
+event_date = date(year, month, day)
+
+# Get the month name and weekday
+month_name = event_date.strftime("%B")
+weekday = event_date.strftime("%A")
+
+# Display the formatted event details
+print("\n=== FORMATTED OUTPUT ===")
+print("Event:", event.upper())
+print("Date:", month_name, day, ",", year)
+print("Year:", year)
+print("Month:", month_name)
+print("Day:", day)
+print("Weekday:", weekday)
+
+print("\nThank you for using the program!")
